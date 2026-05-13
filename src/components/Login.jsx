@@ -35,11 +35,11 @@ function Login() {
 
   useEffect(() => {
     if (isAuthenticated) {
-      if (currentUser.role === "USER") {
+      if (currentUser?.role === "USER") {
         toast.success("Loggedin successfully");
         navigate("/user-profile");
       }
-      if (currentUser.role === "AUTHOR") {
+      if (currentUser?.role === "AUTHOR") {
         navigate("/author-profile");
       }
     }
