@@ -85,7 +85,7 @@ function Register() {
       if (role === "author") {
 
         let resObj = await API.post(
-         "/user-api/users",
+         "/author-api/users",
           formData,
           {
             headers: {

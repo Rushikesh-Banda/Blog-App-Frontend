@@ -31,7 +31,7 @@ function Header() {
 
     console.log("current user", user);
 
-    switch (user.role) {
+    switch (user?.role) {
 
       case "AUTHOR":
         return "/author-profile";
