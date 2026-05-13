@@ -61,7 +61,9 @@ function Register() {
     formData.append("role", newUser.role);
 
     // add profilePic to FormData object
-    formData.append("profilePic", profilePic[0]);
+    if (profilePic && profilePic[0]) {
+  formData.append("profilePic", profilePic[0]);
+}
 
     try {
 
