@@ -16,7 +16,12 @@ export const useAuth = create((set) => ({
       set({ loading: true, error: null });
 
       //make api call
-      const res = await API.post("/user-api/login", userCredObj);
+      const res = await API.post(
+  role === "AUTHOR"
+    ? "/author-api/login"
+    : "/user-api/login",
+  userCredObj
+);
 
       console.log("login response:", res.data); // added debug
 
